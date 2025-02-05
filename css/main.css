@@ -1,0 +1,57 @@
+:root{
+    --primary-color: #612674
+}
+
+html{
+    font-family: sans-serif;
+}
+
+.maxWidth{
+    max-width: 70.25em;
+}
+
+.cabeçalho{
+    text-align: center;
+}
+.menu{
+    width: 100%;
+    padding: 0;
+
+}
+
+.menu a{
+    display: block;
+    list-style-type: none;    
+    background-color: var(--primary-color);
+    padding: 1em;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover{
+    background-color: color-mix(in srgb, var(--primary-color), white 10%);
+}
+
+@media screen and (min-width: 48.75em){
+    .cabeçalho{
+        display: flex;        
+        justify-content: space-between;
+    }
+    .cabeçalho_logo{
+        margin-left: 2em;
+    }
+    .nav_menu{
+    }
+    .nav_menu li{
+        display: inline-block;
+    }
+    .nav_menu a{
+        color: var(--primary-color);
+        background-color: initial;
+
+    }
+    .nav_menu a:hover{
+        background-color: color-mix(in srgb, var(--primary-color), white 85%);
+    }
+}
