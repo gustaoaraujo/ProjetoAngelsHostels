@@ -5,9 +5,15 @@
 html{
     font-family: sans-serif;
 }
+h1, h2, h3, h4{
+    font-family: oxygen;
+}
+
+/* Cabeçalho contendo logo e menu - Mobile First */
 
 .maxWidth{
     max-width: 70.25em;
+    margin: auto;
 }
 
 .cabeçalho{
@@ -16,7 +22,7 @@ html{
 .menu{
     width: 100%;
     padding: 0;
-
+    margin: 0;
 }
 
 .menu a{
@@ -33,10 +39,51 @@ html{
     background-color: color-mix(in srgb, var(--primary-color), white 10%);
 }
 
+/* Primeira Seção com botão - Mobile First */
+
+.intro{
+    text-align: center;
+    background-color: #f6f6f6;
+    padding: 1em;
+}
+.intro_content{
+    width: 60%;
+    margin: 0 auto;
+}
+.intro_content_icon img{
+    display: none;
+    margin-top: 1.5em;
+}
+.intro h1{
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 1em 0;
+}
+.intro p{
+    font-family: oxygen;
+    color: color-mix(in srgb, var(--primary-color), white 30%);
+    font-weight: 600;
+    line-height: 1.5em;
+    margin: 1.5em 0
+}
+.intro_content_button{
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 0.5em ;
+    padding: 1em 3em;
+    color: white;
+    background-color: #58c4c4;
+    margin: 1em 0;
+
+}
+
+/* Media Query para Tablet */
+
 @media screen and (min-width: 48.75em){
     .cabeçalho{
         display: flex;        
         justify-content: space-between;
+        align-items: center;
     }
     .cabeçalho_logo{
         margin-left: 2em;
@@ -53,5 +100,41 @@ html{
     }
     .nav_menu a:hover{
         background-color: color-mix(in srgb, var(--primary-color), white 85%);
+    }
+
+    .intro{
+        background-color: var(--primary-color);
+        color: white;
+    }
+    .intro_content h1, .intro_content p{
+        color: white;
+    }
+
+    .intro_content_icon img{
+        display: inline-block;
+        width: 4em;
+    }
+
+}
+
+/* Media Query para Computador */
+
+@media screen and (min-width: 60em){
+    .intro{
+        background-image: url(../images/bg_topo_1198x670.jpg);
+        background-position: center top;
+        aspect-ratio: 1198/670;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: flex-end;
+    }
+}
+@media screen and (min-width: 74em){
+    .intro{
+        background-image: url(../images/bg_topo_1600x1374.jpg);
+        background-position: center center;
+        max-height: 80vh;
+        width: 100%;
     }
 }
